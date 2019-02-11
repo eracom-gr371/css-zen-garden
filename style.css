@@ -23,7 +23,11 @@ body {
 	padding: 0;
 	animation: rotate 9s linear reverse infinite;
 }
-
+*{
+	color: #fff;
+  font-family: 'Audiowide', cursive;
+		  animation: neon1 1.5s ease-in-out infinite alternate;
+}
 p {
 	margin-top: 0;
 	text-align: justify;
@@ -67,15 +71,18 @@ abbr {
   height: 100vh;
   overflow-x: hidden;
   overflow-y: auto;
+	background-color: black;
 }
 
 .intro {
 	min-width: 470px;
-	width: 100%;
-	box-shadow: 0 0 109px 10px pink;
-	animation: rotate 9s linear reverse infinite;
-	background:white;
+	width: 500px;
+	    height: 355px;
 	text-align:center;
+	    -webkit-background-size: auto 100%;
+	background-size: auto 100%;
+  transform: perspective(1000px) rotateY(30deg) rotateX(10deg);
+		background-color: white;
 }
 
 header h1 {
@@ -110,13 +117,8 @@ header {
 .summary {
 	clear: both;
 	margin: 20px 20px 20px 10px;
-	width: 160px;
-	float: left;
-}
-
-.summary p {
-	font: italic 1.1em/2.2 georgia;
-	text-align: center;
+	width: 500px;
+	background-color: black;
 }
 
 .preamble {
@@ -133,6 +135,32 @@ header {
 .supporting {
 	padding-left: 10px;
 	margin-bottom: 40px;
+	width: 500px;
+	float: right;
+}
+
+.supporting div:nth-of-type(1) {
+	position:absolute;
+	opacity: 0;
+  animation: fadein 40s ease-in-out infinite;
+}
+.supporting div:nth-of-type(2) {
+	position:absolute;
+	opacity: 0;
+  animation: fadein 40s ease-in-out infinite;
+	animation-delay: 10s;
+}
+.supporting div:nth-of-type(3) {
+	position:absolute;
+	opacity: 0;
+  animation: fadein 40s ease-in-out infinite;
+	animation-delay: 20s;
+}
+.supporting div:nth-of-type(4) {
+	position:absolute;
+	opacity: 0;
+  animation: fadein 40s ease-in-out infinite;
+	animation-delay: 30s;
 }
 
 footer {
@@ -226,5 +254,20 @@ footer a:link, footer a:visited {
   }
   to {
     text-shadow: 0 0 2px #fff, 0 0 4px #fff, 0 0 8px #fff, 0 0 12px #228DFF, 0 0 16px #228DFF, 0 0 22px #228DFF, 0 0 26px #228DFF, 0 0 35px #228DFF;
+  }
+}
+
+@keyframes fadein {
+  0% {
+    opacity: 0;
+  }
+  6.25% { /* 3s for fade in */
+    opacity: 1;
+  }
+  26.75% { /* roughly 10s for stay as-is */
+    opacity: 1;
+  }
+  33% { /* 3s for fade out */
+    opacity: 0;
   }
 }
