@@ -18,6 +18,7 @@ body {
 	font: 75% georgia, sans-serif;
 	line-height: 1.88889;
 	background: #fff url(http://csszengarden.com/001/blossoms.jpg) no-repeat bottom right;
+	background-size: 4:3;
 	margin: 0;
 	padding: 0;
 	animation: rotate 9s linear reverse infinite;
@@ -138,40 +139,75 @@ header {
 	position:absolute right;
 	margin-top: -250px;
 	margin-right: 150px;
+	margin-left: 35px;
+	margin-bottom: 40px;
 	transform: perspective(1000px) rotateY(-30deg) rotateX(10deg);
 	padding-left: 10px;
-	margin-bottom: 40px;
-	width: 500px;
+	width: 530px;
 	height: 500px;
 	float: right;
+	padding: 0px 10px 0 10px;
+	background-size: 100%;
+	background-repeat: no-repeat;
+	background-image: url(1.svg);
+	-webkit-mask-image: -webkit-gradient(linear, left 100%, left bottom, from(rgba(0,0,0,1)), to(rgba(0,0,0,0)));
+	-webkit-mask-size:100% 70%;
+	-webkit-mask-position: 0px 35px;
+	-webkit-mask-repeat: no-repeat;
+	z-index:0;
+}
+
+.extra1{
+	margin-top: -250px;
+	position:relative;
+	float: right;
+	width: 530px;
+	height: 500px;
+	transform: perspective(1000px) rotateY(-30deg) rotateX(10deg);
+	background-repeat: no-repeat;
+	background-image: url(1.svg);
+	z-index: 1;
+}
+
+.supporting p{
+	width: 425px;
 }
 
 .supporting div:nth-of-type(1) {
+	margin-top:25px;
+	margin-left: 45px;
 	position:absolute;
 	overflow:hidden;
 	opacity: 0;
-  animation: fadein 40s ease-in-out infinite, moving 15s ease-in-out;
+  animation: fadein 40s infinite;
 }
+
 .supporting div:nth-of-type(2) {
+	height: 300px;
+	margin-top:25px;
+	margin-left: 45px;
 	position:absolute;
 	opacity: 0;
-  animation: fadein 40s ease-in-out infinite;
-	animation-delay: 10s;
+  animation: fadein 40s 10s infinite, moving 40s 14s infinite;
 }
 .supporting div:nth-of-type(3) {
+	height:500px;
+	margin-top:25px;
+	margin-left: 45px;
 	position:absolute;
 	opacity: 0;
-  animation: fadein 40s ease-in-out infinite;
-	animation-delay: 20s;
+  animation: fadein 40s 20s infinite;
 }
 .supporting div:nth-of-type(4) {
+	margin-top:25px;
+	margin-left: 45px;
 	position:absolute;
 	opacity: 0;
-  animation: fadein 40s ease-in-out infinite;
-	animation-delay: 30s;
+  animation: fadein 40s 30s infinite, moving2 40s 30s infinite;
 }
 
 footer {
+	position:absolute;
 	text-align: center;
 }
 footer a:link, footer a:visited {
@@ -180,7 +216,7 @@ footer a:link, footer a:visited {
 
 .sidebar {
 	margin-left: 600px;
-	position: absolute;
+	position: relative;
 	top: 0;
 	right: 0;
 }
@@ -246,15 +282,6 @@ footer a:link, footer a:visited {
 	color: #B3AE94;
 }
 
-.extra1 {
-	background: transparent url(http://csszengarden.com/001/cr2.gif) top left no-repeat;
-	position: absolute;
-	top: 40px;
-	right: 0;
-	width: 148px;
-	height: 110px;
-}
-
 
 @keyframes neon2 {
   from {
@@ -281,5 +308,9 @@ footer a:link, footer a:visited {
 }
 @keyframes moving{
 	from {top: 0px;}
-	to {top: -200px;}
+	to {top: -500px;}
+}
+@keyframes moving2{
+	from {top: 0px;}
+	to {top: -500px;}
 }
