@@ -17,32 +17,34 @@ html {
 body {
 	font: 75% georgia, sans-serif;
 	line-height: 1.88889;
-	background: #fff url(http://csszengarden.com/001/blossoms.jpg) no-repeat bottom right;
-	background-size: 4:3;
+	background-color: black;
 	margin: 0;
 	padding: 0;
-	animation: rotate 9s linear reverse infinite;
+	background-image: url(stars.gif);
+	background-size: 100vw 100vh;
 }
 *{
-
 	color: #eeddac;
   font-family: 'Audiowide', cursive;
+	font-size: 1.5vh;
 		  animation: neon1 1.5s ease-in-out infinite alternate;
 }
 p {
 	margin-top: 0;
-	text-align: justify;
+	text-align:left;
+	animation: neon2 1.5s ease-in-out infinite alternate;
 }
 
 h3 {
 	letter-spacing: 1px;
 	margin-bottom: 0;
+	animation: neon2 1.5s ease-in-out infinite alternate;
 }
 
 a:link {
 	font-weight: bold;
 	text-decoration: none;
-	color: #B7A5DF;
+	color: white;
 }
 
 a:visited {
@@ -66,111 +68,119 @@ abbr {
   perspective:unit(perspective, px);
   perspective-origin: 50% 100%;
   width: 100vw;
-  height: 100vh;
+  height: 1080px;
   overflow-x: hidden;
   overflow-y: auto;
-	background-color: black;
 }
 
-.intro {
-	min-width: 470px;
-	width: 500px;
-	    height: 355px;
-	text-align:center;
-	    -webkit-background-size: auto 100%;
-	background-size: auto 100%;
-		background-color: white;
+.intro{
+	padding-top: 50px;
 }
 
 header h1 {
-		text-align: center;
-	width: 400px;
-	height: 87px;
-
+	position: absolute;
+	text-align: center;
+	width:300px;
+	left:-150px;
+	font-size: 3vh;
 }
 
 header h2 {
-		text-align: center;
-	width: 400px;
-	height: 18px;
+	width:16vw;
+	height: 1080px;
+	left:-8vw;
+	position:absolute;
+	text-align: center;
+	padding-top: 5vh;
+	font-size: 3vh;
 }
 
 header {
-	width:50%;
-	padding-top: 20px;
-	height: 87px;
+	left: 50vw;
+	position:absolute;
+	animation: neon2 1.5s ease-in-out infinite alternate;
 }
 
-.summary {
+.summary{
+		padding-top: 56.25%;
+	position:absolute;
 	clear: both;
-	margin: 20px 20px 20px 10px;
-	width: 500px;
-	background-color: black;
+	left:37vw;
+	padding-top: 20vh;
+}
+
+.summary p{
+	width:25vw;
 }
 
 .preamble {
-	  transform: perspective(1000px) rotateY(30deg) rotateX(10deg);
-	width: 450px;
-	margin: auto;
-	padding: 0px 10px 0 10px;
-	background-size: 100%;
+	position:absolute;
+	transform: perspective(1000px) rotateY(30deg) rotateX(10deg);
+	width: 35vw;
+	height: 50vh;
+	left:7vw;
+	padding: 0px 0px 0 0px;
+	background-size: 95%;
 	background-repeat: no-repeat;
 	background-image: url(1.svg);
-	padding-bottom: 25px;
+	background-position: center;
+	margin-top: 25vh;
 }
 
 .preamble p{
-	mix-blend-mode: color-dodge 50%;
-	padding-left: 35px;
-	padding-right:35px;
+	font-size: 1.5vh;
+	padding: 0px 4vw;
   font-family: 'Audiowide', cursive;
 		  animation: neon2 1.5s ease-in-out infinite alternate;
 }
 
 .preamble h3{
-	padding-top: 25px;
-	padding-bottom: 15px;
+		padding: 5vh 4vw 2vh 4vw;
   font-family: 'Audiowide', cursive;
 		  animation: neon2 1.5s ease-in-out infinite alternate;
 }
 
 
 .supporting {
-	position:absolute right;
-	margin-top: -250px;
-	margin-right: 150px;
-	margin-left: 35px;
-	margin-bottom: 40px;
-	transform: perspective(1000px) rotateY(-30deg) rotateX(10deg);
-	padding-left: 10px;
-	width: 530px;
-	height: 500px;
-	float: right;
-	padding: 0px 10px 0 10px;
+	position:absolute;
+	right:7.5vw;
+	margin-top: 20vh;
+	transform: perspective(1200px) rotateY(-30deg) rotateX(10deg);
+	padding-left: 2vw;
+	width: 35vw;
+	height: 46vh;
 	background-size: 100%;
 	background-repeat: no-repeat;
-	background-image: url(1.svg);
 	-webkit-mask-image: -webkit-gradient(linear, left 100%, left bottom, from(rgba(0,0,0,1)), to(rgba(0,0,0,0)));
-	-webkit-mask-size:100% 70%;
-	-webkit-mask-position: 0px 35px;
+	-webkit-mask-size:100vw 50vh;
+	-webkit-mask-position: 0vw 5vh;
 	-webkit-mask-repeat: no-repeat;
-	z-index:0;
+	z-index:1;
+}
+
+.supporting h3{
+	padding:1vh 2vw 1vh 2vw;
 }
 
 .extra1{
-	margin-top: -250px;
-	position:relative;
-	float: right;
-	width: 530px;
-	height: 500px;
-	transform: perspective(1000px) rotateY(-30deg) rotateX(10deg);
+	position:absolute;
+	right: 7vw;
+	top:0vh;
+	margin-top: 22vh;
+	padding-left: 1vw;
+	padding: 0px 10px 0 10px;
+	width: 35vw;
+	height: 600px;
+	transform: perspective(1200px) rotateY(-30deg) rotateX(10deg);
+	background-size: 100%;
 	background-repeat: no-repeat;
 	background-image: url(1.svg);
-	z-index: 1;
+	z-index: 0;
 }
 
 .supporting p{
-	width: 425px;
+	padding: 0px 3vw 0px 2vw;
+	animation: neon2 1.5s ease-in-out infinite alternate;
 }
 
 .supporting div:nth-of-type(1) {
@@ -179,7 +189,7 @@ header {
 	position:absolute;
 	overflow:hidden;
 	opacity: 0;
-  animation: fadein 40s infinite;
+  animation: fadein 50s infinite;
 }
 
 .supporting div:nth-of-type(2) {
@@ -188,7 +198,7 @@ header {
 	margin-left: 45px;
 	position:absolute;
 	opacity: 0;
-  animation: fadein 40s 10s infinite, moving 40s 14s infinite;
+  animation: fadein 50s 15s infinite, moving 50s 17s infinite;
 }
 .supporting div:nth-of-type(3) {
 	height:500px;
@@ -196,14 +206,14 @@ header {
 	margin-left: 45px;
 	position:absolute;
 	opacity: 0;
-  animation: fadein 40s 20s infinite;
+  animation: fadein 50s 30s infinite;
 }
 .supporting div:nth-of-type(4) {
 	margin-top:25px;
 	margin-left: 45px;
 	position:absolute;
 	opacity: 0;
-  animation: fadein 40s 30s infinite, moving2 40s 30s infinite;
+  animation: fadein 50s 45s infinite, moving2 50s 47s infinite;
 }
 
 footer {
@@ -215,22 +225,22 @@ footer a:link, footer a:visited {
 }
 
 .sidebar {
-	margin-left: 600px;
-	position: relative;
-	top: 0;
-	right: 0;
+	position: absolute;
+	margin-top:-25vh;
+	
+	animation: neon2 1.5s ease-in-out infinite alternate;
+	font-size: 5px;
+
 }
 
 .sidebar .wrapper {
-	font: 10px verdana, sans-serif;
-	background: transparent url(http://csszengarden.com/001/paper-bg.jpg) top left repeat-y;
+	font: 1px "Audiowide", sans-serif;
 	padding: 10px;
 	margin-top: 150px;
 	width: 130px;
 }
 
 .sidebar h3.select {
-	background: transparent url(http://csszengarden.com/001/h3.gif) no-repeat top left;
 	margin: 10px 0 5px 0;
 	width: 97px;
 	height: 16px;
@@ -240,7 +250,7 @@ footer a:link, footer a:visited {
 }
 
 .sidebar h3.archives {
-	background: transparent url(http://csszengarden.com/001/h5.gif) no-repeat top left;
+
 	margin: 25px 0 5px 0;
 	width:57px;
 	height: 14px;
@@ -250,7 +260,6 @@ footer a:link, footer a:visited {
 }
 
 .sidebar h3.resources {
-	background: transparent url(http://csszengarden.com/001/h6.gif) no-repeat top left;
 	margin: 25px 0 5px 0;
 	width:63px;
 	height: 10px;
@@ -262,11 +271,9 @@ footer a:link, footer a:visited {
 .sidebar ul {
 	margin: 0;
 	padding: 0;
-	animation: rotate 9s linear reverse infinite;
 }
 
 .sidebar li {
-	line-height: 1.3em;
 	background: transparent url(http://csszengarden.com/001/cr1.gif) no-repeat top center;
 	display: block;
 	padding-top: 5px;
@@ -275,14 +282,25 @@ footer a:link, footer a:visited {
 }
 
 .sidebar li a:link {
-	color: #988F5E;
+	color: white;
 }
 
 .sidebar li a:visited {
 	color: #B3AE94;
 }
 
+.extra2{
+	top:0%;
+	position:absolute;
+	width: 100vw;
+	height: 100vh;
+	background-image: url(ships.png);
+	background-size: 100%;
+}
 
+[title="Cascading Style Sheets"]{
+
+}
 @keyframes neon2 {
   from {
     text-shadow: 0 0 5px #eed48d, 0 0 10px #f08331, 0 0 15px #f08331, 0 0 30px #f08331, 0 0 35px #f08331, 0 0 40px #f08331, 0 0 50px #f08331, 0 0 75px #f08331;
@@ -312,5 +330,5 @@ footer a:link, footer a:visited {
 }
 @keyframes moving2{
 	from {top: 0px;}
-	to {top: -500px;}
+	to {top: -700px;}
 }
